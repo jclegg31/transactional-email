@@ -1,1252 +1,249 @@
 <!DOCTYPE html>
-<html
-  lang="en"
-  dir="ltr"
-  xmlns:v="urn:schemas-microsoft-com:vml"
-  xmlns:o="urn:schemas-microsoft-com:office:office"
->
+<html lang="en">
   <head>
     <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1, user-scalable=yes"
-    />
-    <meta
-      name="format-detection"
-      content="telephone=no, date=no, address=no, email=no, url=no"
-    />
-    <meta name="x-apple-disable-message-reformatting" />
-    <meta name="color-scheme" content="light dark" />
-    <meta name="supported-color-schemes" content="light dark" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Southwest Airlines</title>
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
       href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,300..900;1,300..900&display=swap"
       rel="stylesheet"
     />
-    <title>Southwest Airlines</title>
-    <!--[if mso]>
-      <noscript>
-        <xml>
-          <o:OfficeDocumentSettings>
-            <o:PixelsPerInch>96</o:PixelsPerInch>
-          </o:OfficeDocumentSettings>
-        </xml>
-      </noscript>
-    <![endif]-->
     <style>
-      :root {
-        color-scheme: light dark;
-        /* supported-color-schemes: light dark; */
+      @media screen and (max-width: 600px) {
+        /* screens smaller than 600px */
+        .main-container {
+          width: 100% !important;
+        }
+
+        .updated-itinerary {
+          margin: 0;
+        }
+
+        .web-and-mobile-links {
+          margin-bottom: 13px;
+        }
+
+        .responsive-table td {
+          display: block !important;
+          width: 100% !important;
+          text-align: left !important;
+          padding-bottom: 5px !important;
+        }
+
+        .link-column {
+          padding-top: 0 !important;
+          margin-bottom: 8px !important;
+        }
+
+        .redeemed-points tr {
+          display: block !important;
+        }
+
+        .plane-icon,
+        .redeemed-text {
+          width: 100% !important;
+          display: block;
+          padding: 0 10px 10px 10px !important;
+          box-sizing: border-box;
+        }
+
+        .plane-icon img {
+          margin: 5px auto !important;
+        }
+
+        .date-space {
+          padding-top: 8px !important;
+        }
+
+        .redeemed-text {
+          text-align: center;
+        }
+
+        .confirmation-row {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .confirmation-cell {
+          display: block !important;
+          width: 100% !important;
+          text-align: left !important;
+          padding: 2px 0 0 0 !important;
+        }
+
+        .header-flight-1,
+        .header-flight-2 {
+          width: 22% !important;
+          display: table-cell !important;
+        }
+
+        .date-of-flight,
+        .est-travel-time,
+        .wanna-get-away {
+          display: block !important;
+          width: 100% !important;
+          text-align: left !important;
+          padding: 2px 15px !important;
+          box-sizing: border-box !important;
+        }
+
+        .date-of-flight {
+          margin-top: 2px;
+        }
+
+        .wanna-get-away {
+          margin-bottom: 2px;
+        }
+
+        .flight-logo {
+          display: none;
+        }
       }
     </style>
   </head>
-  <body class="body" xml:lang="en">
-    <div
-      role="article"
-      aria-roledescription="email"
-      aria-label="southwest-confirmation"
-      lang="en"
-      dir="ltr"
-      style="
-        font-family: 'Figtree', serif;
-        font-size: medium;
-        font-size: max(16px, 1rem);
-      "
-    >
-      <!-- email content in here -->
+  <body
+    style="
+      font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande',
+        'Lucida Sans', Arial, sans-serif;
+    "
+  >
+    <!-- email content in here -->
 
-      <!-- start of html email -->
-      <table width="100%" border="0" cellspacing="0" cellpadding="0">
-        <tr>
-          <td>
-            <!-- start of main container -->
-            <table
-              class="container"
-              width="600"
-              align="center"
-              cellspacing="0"
-              cellpadding="0"
-              border="0"
-              style="background-color: #fff"
-            >
-              <!-- start all the rows here -->
+    <!-- start of html email -->
+    <table width="100%" border="0" cellspacing="0" cellpadding="0">
+      <tr>
+        <td align="center">
+          <!-- start of main container -->
+          <table
+            class="main-container"
+            width="600"
+            cellspacing="0"
+            cellpadding="0"
+            border="0"
+            style="background-color: #fff"
+          >
+            <!-- start all the rows here -->
 
-              <!-- start here's your itinerary row -->
-              <tr>
-                <td style="border-bottom: 1px solid #ccc">
-                  <p style="font-size: 9px; color: #707070; margin-bottom: 0px">
-                    Here's your updated itinerary and trip receipt.
-                  </p>
-                  <p style="margin-top: -5px">
-                    <a
-                      href="#"
-                      style="
-                        font-size: 9px;
-                        color: #304cb2;
-                        text-decoration: none;
-                      "
-                      >View in web browser</a
-                    >
-                    <span style="font-size: 9px; color: #707070"> | </span>
-                    <a
-                      href="#"
-                      style="
-                        font-size: 9px;
-                        color: #304cb2;
-                        text-decoration: none;
-                      "
-                      >view our mobile site</a
-                    >
-                  </p>
-                </td>
-              </tr>
-              <!-- end here's your itinerary row -->
-
-              <!-- start of logo/link row -->
-              <tr>
-                <td id="top-nav" valign="middle">
-                  <table
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    width="100%"
-                  >
-                    <tr>
-                      <td>
-                        <img
-                          src="/images/southwest-logo.png"
-                          alt="Southwest Logo"
-                        />
-                      </td>
-                      <td>
-                        <table align="right">
-                          <tr>
-                            <td>
-                              <p
-                                style="
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  font-weight: 900;
-                                  font-size: 14px;
-                                "
-                              >
-                                <a
-                                  href="#"
-                                  style="color: #304cb2; text-decoration: none"
-                                  >Manage Flight</a
-                                >
-                                <span style="color: #707070"> | </span>
-                                <a
-                                  href="#"
-                                  style="color: #304cb2; text-decoration: none"
-                                  >Flight Status</a
-                                >
-                                <span style="color: #707070"> | </span>
-                                <a
-                                  href="#"
-                                  style="color: #304cb2; text-decoration: none"
-                                  >My Account</a
-                                >
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <!-- end of logo/link row -->
-
-              <!-- start of Travel Notice row -->
-              <tr>
-                <td id="advisory" valign="top" style="padding-bottom: 10px">
-                  <table
-                    width="100%"
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    style="background-color: #a4baf2"
-                  >
-                    <tr>
-                      <td
-                        class="wrap"
-                        valign="top"
-                        style="padding: 15px 15px 7px 15px"
-                      >
-                        <table
-                          width="100%"
-                          border="0"
-                          cellpadding="0"
-                          cellspacing="0"
-                        >
-                          <tr>
-                            <td style="padding-bottom: 10px">
-                              <table
-                                align="left"
-                                border="0"
-                                cellpadding="0"
-                                cellspacing="0"
-                              >
-                                <tr>
-                                  <td
-                                    valign="middle"
-                                    style="padding-right: 15px"
-                                  >
-                                    <img
-                                      src="/images/travel-notice.png"
-                                      alt="Warning icon for Travel Notice"
-                                      width="24"
-                                      style="display: block"
-                                    />
-                                  </td>
-                                  <td class="copy" valign="middle">
-                                    <p
-                                      style="
-                                        color: #111b40;
-                                        font-size: 18px;
-                                        font-weight: bold;
-                                        margin: 0;
-                                      "
-                                    >
-                                      Travel notice
-                                    </p>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <!-- global notice text row -->
-                          <tr>
-                            <td valign="top">
-                              <p
-                                style="
-                                  color: #111b40;
-                                  font-size: 12px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0;
-                                "
-                              >
-                                <strong>REAL ID Requirement:</strong> Do you
-                                have a REAL ID? Beginning May 7, 2025, you will
-                                need a state-issued REAL ID compliant license or
-                                identification card, or another acceptable form
-                                of ID (such as a U.S. Passport), to fly within
-                                the United States. Visit
-                                <a
-                                  href="http://www.tsa.gov"
-                                  style="color: #304cb2"
-                                  >www.tsa.gov</a
-                                >
-                                for a list of acceptable forms of ID and
-                                additional information regarding REAL ID
-                                requirement.
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <!-- end of Travel Notice row -->
-
-              <!-- start of Redeemed Points row with plane -->
-              <tr>
-                <td>
-                  <table
-                    class="intro-redeem"
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
-                    width="100%"
-                  >
-                    <tr>
-                      <td
-                        class="container"
-                        style="padding-bottom: 10px"
-                        valign="top"
-                      >
-                        <table
-                          border="0"
-                          cellpadding="0"
-                          cellspacing="0"
-                          width="100%"
-                          style="background-color: #304cb2"
-                        >
-                          <tr>
-                            <td style="padding: 0" valign="top">
-                              <table
-                                class="column-left"
-                                width="125"
-                                border="0"
-                                cellpadding="0"
-                                cellspacing="0"
-                              >
-                                <tr>
-                                  <td
-                                    valign="middle"
-                                    style="padding: 10px 10px 0 10px"
-                                  >
-                                    <img
-                                      src="/images/airplane-icon.png"
-                                      alt="Icon of an airplane"
-                                      width="95"
-                                      style="display: block"
-                                    />
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td>
-                              <table
-                                border="0"
-                                cellspacing="0"
-                                cellpadding="0"
-                                width="475"
-                              >
-                                <tr>
-                                  <td
-                                    style="padding: 15px 15px 15px 0"
-                                    valign="middle"
-                                  >
-                                    <p
-                                      style="
-                                        color: #fff;
-                                        font-size: 20px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0 0 10px 0;
-                                      "
-                                    >
-                                      Hi Jameson,
-                                    </p>
-                                    <p
-                                      style="
-                                        color: #fff;
-                                        font-size: 14px;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      You successfully redeemed 40,564 Rapid
-                                      Rewards® points for this trip. We're
-                                      looking forward to flying together! It
-                                      can't come soon enough. Below you'll find
-                                      your itinerary, important travel
-                                      information, and trip receipt. See you
-                                      onboard soon!
-                                    </p>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <!-- end of Redeemed Points row with plane -->
-
-              <!-- start overview of itinerary -->
-              <tr>
-                <td style="padding: 15px" valign="top">
-                  <table
-                    cellspacing="0"
-                    cellpadding="0"
-                    border="0"
-                    width="100%"
-                    style="border-bottom: 1px solid #ccc"
-                  >
-                    <tr>
-                      <td style="padding-bottom: 10px" valign="top">
-                        <p
-                          style="
-                            color: #636363;
-                            font-size: 14px;
-                            font-weight: bold;
-                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
-                              'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                            text-align: left;
-                            text-transform: uppercase;
-                            margin: 0;
-                          "
-                        >
-                          June 28 - July 2
-                        </p>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding-bottom: 10px" valign="top">
-                        <table
-                          align="left"
-                          border="0"
-                          cellpadding="0"
-                          cellspacing="0"
-                        >
-                          <tr>
-                            <td valign="top">
-                              <p
-                                style="
-                                  font-size: 40px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  color: #111b40;
-                                  margin: 0;
-                                  text-align: left;
-                                "
-                              >
-                                DEN
-                              </p>
-                            </td>
-                            <td style="padding: 0 15px" valign="middle">
-                              <img
-                                src="/images/airplane-small-icon.png"
-                                alt="small flight icon from one destination to another"
-                                style="display: block; width: 27"
-                              />
-                            </td>
-                            <td>
-                              <p
-                                style="
-                                  font-size: 40px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  color: #111b40;
-                                  margin: 0;
-                                  text-align: left;
-                                "
-                              >
-                                BHM
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                    <tr>
-                      <td style="padding-bottom: 15px" valign="top">
-                        <p
-                          style="
-                            color: #646464;
-                            font-size: 13px;
-                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
-                              'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                            text-align: left;
-                            margin: 0;
-                          "
-                        >
-                          Denver to Birmingham
-                        </p>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <!-- end overview of itinerary -->
-
-              <!-- start of confirmation section -->
-              <tr>
-                <td valign="top" style="padding: 0 15px">
-                  <table
-                    border="0"
-                    cellspacing="0"
-                    cellpadding="0"
-                    style="border-bottom: 1px solid #ccc"
-                    width="100%"
-                  >
-                    <tr>
-                      <td style="padding-bottom: 10px" valign="top">
-                        <table
-                          border="0"
-                          cellspacing="0"
-                          cellpadding="0"
-                          width="100%"
-                        >
-                          <tr>
-                            <td
-                              style="padding: 0; font-weight: normal"
-                              valign="bottom"
-                            >
-                              <table
-                                border="0"
-                                cellspacing="0"
-                                cellpadding="0"
-                                align="left"
-                              >
-                                <tr>
-                                  <td valign="bottom">
-                                    <p
-                                      style="
-                                        color: #111b40;
-                                        font-size: 14px;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      Confirmation #
-
-                                      <span
-                                        style="color: #008522; font-size: 32px"
-                                        ><strong>4T4SMU</strong></span
-                                      >
-                                    </p>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                            <td
-                              style="padding: 0; font-weight: normal"
-                              valign="bottom"
-                            >
-                              <table
-                                border="0"
-                                cellspacing="0"
-                                cellpadding="0"
-                                align="right"
-                              >
-                                <tr>
-                                  <td valign="bottom" style="padding-top: 5px">
-                                    <p
-                                      style="
-                                        color: #646464;
-                                        font-size: 12px;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: right;
-                                        margin: 0;
-                                      "
-                                    >
-                                      Confirmation date: 01/01/25
-                                    </p>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-
-                    <!-- passenger row -->
-                    <tr>
-                      <td valign="top">
-                        <table
-                          border="0"
-                          cellspacing="0"
-                          cellpadding="0"
-                          align="left"
-                        >
-                          <tr>
-                            <td
-                              style="padding-right: 15px; padding-bottom: 10px"
-                              valign="top"
-                            >
-                              <p
-                                style="
-                                  color: #646464;
-                                  font-size: 14px;
-                                  font-weight: bold;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0 0 5px 0;
-                                "
-                              >
-                                PASSENGER
-                              </p>
-                              <p
-                                style="
-                                  color: #646464;
-                                  font-size: 12px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0 0 5px 0;
-                                "
-                              >
-                                RAPID REWARDS #
-                              </p>
-                              <p
-                                style="
-                                  color: #646464;
-                                  font-size: 12px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0 0 5px 0;
-                                "
-                              >
-                                TICKET #
-                              </p>
-                              <p
-                                style="
-                                  color: #646464;
-                                  font-size: 12px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0;
-                                "
-                              >
-                                EST. POINTS EARNED
-                              </p>
-                            </td>
-                            <td valign="top" style="padding-bottom: 10px">
-                              <p
-                                style="
-                                  color: #111b40;
-                                  font-size: 14px;
-                                  font-weight: bold;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0 0 5px 0;
-                                "
-                              >
-                                Jameson Smith
-                              </p>
-                              <p
-                                style="
-                                  color: #111b40;
-                                  font-size: 12px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0 0 5px 0;
-                                "
-                              >
-                                23455325087
-                              </p>
-                              <p
-                                style="
-                                  color: #111b40;
-                                  font-size: 12px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0 0 5px 0;
-                                "
-                              >
-                                6349773008765
-                              </p>
-                              <p
-                                style="
-                                  color: #111b40;
-                                  font-size: 12px;
-                                  font-family: 'Trebuchet MS',
-                                    'Lucida Sans Unicode', 'Lucida Grande',
-                                    'Lucida Sans', Arial, sans-serif;
-                                  text-align: left;
-                                  margin: 0;
-                                "
-                              >
-                                0
-                              </p>
-                            </td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <!-- end of confirmation section -->
-
-              <!-- start of disclaimer section -->
-              <tr>
-                <td style="padding: 15px" valign="top">
-                  <p
+            <!-- Start of here's your itinerary row -->
+            <tr>
+              <td style="border-bottom: 1px solid #ccc">
+                <p
+                  class="updated-itinerary"
+                  style="font-size: 9px; color: #707070; margin-bottom: 0px"
+                >
+                  Here's your updated itinerary and trip receipt.
+                </p>
+                <p class="web-and-mobile-links" style="margin-top: -6px">
+                  <a
+                    href="#"
                     style="
-                      color: #646464;
-                      font-size: 10px;
-                      font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
-                        'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                      text-align: left;
-                      margin: 0;
+                      font-size: 9px;
+                      color: #304cb2;
+                      text-decoration: none;
                     "
+                    >View in web browser</a
                   >
-                    Rapid Rewards® points are only estimations.
-                  </p>
-                </td>
-              </tr>
-              <!-- end of disclaimer section -->
-
-              <!-- start of itinerary -->
-              <tr>
-                <td valign="top">
-                  <table
-                    id="itinerary"
-                    width="100%"
-                    border="0"
-                    cellpadding="0"
-                    cellspacing="0"
+                  <span style="font-size: 9px; color: #707070"> | </span>
+                  <a
+                    href="#"
+                    style="
+                      font-size: 9px;
+                      color: #304cb2;
+                      text-decoration: none;
+                    "
+                    >view our mobile site</a
                   >
-                    <tr>
-                      <td
-                        class="container"
-                        valign="top"
-                        style="padding-bottom: 10px"
-                      >
-                        <p
-                          style="
-                            color: #111b40;
-                            font-size: 24px;
-                            font-weight: bold;
-                            font-family: 'Trebuchet MS', 'Lucida Sans Unicode',
-                              'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-                            text-align: left;
-                            margin: 0;
-                          "
+                </p>
+              </td>
+            </tr>
+            <!-- End of here's your itinerary row -->
+
+            <!-- Start of logo/link row -->
+            <tr>
+              <td valign="middle">
+                <table
+                  class="responsive-table"
+                  width="100%"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="border-collapse: collapse"
+                >
+                  <tr>
+                    <!-- First Column -->
+                    <td
+                      style="
+                        text-align: left;
+                        padding: 10px;
+                        vertical-align: middle;
+                      "
+                    >
+                      <img
+                        src="/images/southwest-logo.png"
+                        alt="Southwest Logo"
+                        style="max-width: 100%; height: auto"
+                      />
+                    </td>
+                    <!-- Second Column -->
+                    <td
+                      class="link-column"
+                      style="
+                        text-align: right;
+                        padding: 10px;
+                        vertical-align: middle;
+                      "
+                    >
+                      <p style="margin: 0; font-weight: bold">
+                        <a
+                          href="#"
+                          style="color: #304cb2; text-decoration: none"
+                          >Manage Flight</a
                         >
-                          Your itinerary
-                        </p>
-                      </td>
-                    </tr>
-                    <!-- main container for flight 1 and flight 2 -->
-                    <tr>
-                      <td
-                        class="container"
-                        valign="top"
-                        style="padding-bottom: 10px"
-                      >
-                        <table
-                          width="100%"
-                          border="0"
-                          cellpadding="0"
-                          cellspacing="0"
-                          style="background-color: #fff"
+                        <span style="color: #707070"> | </span>
+                        <a
+                          href="#"
+                          style="color: #304cb2; text-decoration: none"
+                          >Flight Status</a
                         >
-                          <!-- start header -->
-                          <tr>
-                            <td class="header" valign="top">
-                              <table
-                                width="100%"
-                                border="0"
-                                cellpadding="0"
-                                cellspacing="0"
-                                style="background-color: #111b3f"
-                              >
-                                <!-- Flight 1 -->
-                                <tr>
-                                  <td
-                                    class="h1"
-                                    valign="top"
-                                    style="padding: 5px 0 5px 15px"
-                                  >
-                                    <p
-                                      style="
-                                        color: #fff;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      Flight 1:
-                                    </p>
-                                  </td>
+                        <span style="color: #707070"> | </span>
+                        <a
+                          href="#"
+                          style="color: #304cb2; text-decoration: none"
+                          >My Account</a
+                        >
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End of logo/link row -->
 
-                                  <!-- Date of flight-->
-                                  <td
-                                    valign="top"
-                                    style="padding: 5px 15px 5px 0"
-                                  >
-                                    <table
-                                      align="left"
-                                      border="0"
-                                      cellpadding="0"
-                                      cellspacing="0"
-                                    >
-                                      <tr>
-                                        <td
-                                          valign="top"
-                                          style="
-                                            padding: 0;
-                                            font-weight: normal;
-                                          "
-                                        >
-                                          <table
-                                            class="column h2"
-                                            width="100%"
-                                            border="0"
-                                            cellpadding="0"
-                                            cellspacing="0"
-                                          >
-                                            <tr>
-                                              <td
-                                                valign="top"
-                                                style="padding-right: 20px"
-                                              >
-                                                <p
-                                                  style="
-                                                    color: #fff;
-                                                    font-size: 14px;
-                                                    font-family: 'Trebuchet MS',
-                                                      'Lucida Sans Unicode',
-                                                      'Lucida Grande',
-                                                      'Lucida Sans', Arial,
-                                                      sans-serif;
-                                                    text-align: left;
-                                                    margin: 0;
-                                                  "
-                                                >
-                                                  Saturday, 06/15/2025
-                                                </p>
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </td>
-
-                                        <!-- Est Travel Time  -->
-                                        <td valign="top">
-                                          <table
-                                            class="column h4"
-                                            width="100%"
-                                            border="0"
-                                            cellpadding="0"
-                                            cellspacing="0"
-                                          >
-                                            <tr>
-                                              <td
-                                                valign="top"
-                                                style="padding-right: 20px"
-                                              >
-                                                <p
-                                                  style="
-                                                    color: #fff;
-                                                    font-size: 14px;
-                                                    font-family: 'Trebuchet MS',
-                                                      'Lucida Sans Unicode',
-                                                      'Lucida Grande',
-                                                      'Lucida Sans', Arial,
-                                                      sans-serif;
-                                                    text-align: left;
-                                                    margin: 0;
-                                                  "
-                                                >
-                                                  Est. Travel Time:
-                                                  <strong>2h 30m</strong>
-                                                </p>
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </td>
-
-                                        <!-- Wanna Get Away -->
-                                        <td valign="top" style="padding: 0">
-                                          <table
-                                            border="0"
-                                            cellpadding="0"
-                                            cellspacing="0"
-                                            width="100%"
-                                          >
-                                            <tr>
-                                              <td valign="top">
-                                                <p
-                                                  style="
-                                                    color: #fff;
-                                                    font-size: 12px;
-
-                                                    font-family: 'Trebuchet MS',
-                                                      'Lucida Sans Unicode',
-                                                      'Lucida Grande',
-                                                      'Lucida Sans', Arial,
-                                                      sans-serif;
-                                                    text-align: left;
-                                                    margin: 0;
-                                                  "
-                                                >
-                                                  <a
-                                                    href="#"
-                                                    style="
-                                                      color: #fff;
-                                                      text-decoration: underline;
-                                                    "
-                                                    >Wanna Get Away®</a
-                                                  >
-                                                </p>
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <!-- end of Flight 1 Header -->
-
-                          <!-- Start of Segment for Flight 1 -->
-                          <tr>
-                            <td valign="top" style="padding: 15px">
-                              <table
-                                align="left"
-                                border="0"
-                                cellpadding="0"
-                                cellspacing="0"
-                              >
-                                <tr>
-                                  <!-- flight number -->
-                                  <td
-                                    width="74"
-                                    valign="middle"
-                                    style="padding-right: 15px"
-                                  >
-                                    <p
-                                      style="
-                                        color: #111b40;
-                                        font-size: 14px;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      FLIGHT
-                                    </p>
-                                    <p
-                                      style="
-                                        color: #111b40;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      # 3980
-                                    </p>
-                                  </td>
-                                  <!-- end flight number -->
-                                  <!-- departure details -->
-                                  <td
-                                    width="160"
-                                    valign="top"
-                                    style="padding-right: 15px"
-                                  >
-                                    <p
-                                      style="
-                                        color: #646464;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0 0 5px 0;
-                                      "
-                                    >
-                                      DEPARTS
-                                    </p>
-                                    <p
-                                      style="
-                                        color: #13247c;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0 0 4px 0;
-                                      "
-                                    >
-                                      <span style="font-size: 20px"
-                                        ><strong>DEN 01:35</strong></span
-                                      >PM
-                                    </p>
-                                    <p
-                                      style="
-                                        color: #646464;
-                                        font-size: 12px;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      Denver
-                                    </p>
-                                  </td>
-
-                                  <!-- end departure details -->
-
-                                  <!-- plane icon -->
-                                  <td
-                                    valign="middle"
-                                    style="padding-right: 15px"
-                                  >
-                                    <img
-                                      src="/images/airplane-small-icon.png"
-                                      alt="small airplane icon between departures and arrivals"
-                                    />
-                                  </td>
-                                  <!-- end plane icon -->
-
-                                  <!-- arrival details -->
-                                  <td
-                                    width="160"
-                                    valign="top"
-                                    style="padding-right: 15px"
-                                  >
-                                    <p
-                                      style="
-                                        color: #646464;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0 0 5px 0;
-                                      "
-                                    >
-                                      ARRIVES
-                                    </p>
-                                    <p
-                                      style="
-                                        color: #13247c;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0 0 4px 0;
-                                      "
-                                    >
-                                      <span style="font-size: 20px"
-                                        ><strong>BHM 05:05</strong></span
-                                      >PM
-                                    </p>
-                                    <p
-                                      style="
-                                        color: #646464;
-                                        font-size: 12px;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      Birmingham
-                                    </p>
-                                  </td>
-
-                                  <!-- end arrival details -->
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <!-- End of Segment for Flight 1 -->
-
-                          <!-- start header flight 2 -->
-                          <tr>
-                            <td class="header" valign="top">
-                              <table
-                                width="100%"
-                                border="0"
-                                cellpadding="0"
-                                cellspacing="0"
-                                style="background-color: #111b3f"
-                              >
-                                <!-- Flight 2 -->
-                                <tr>
-                                  <td
-                                    class="h1"
-                                    valign="top"
-                                    style="padding: 5px 0 5px 15px"
-                                  >
-                                    <p
-                                      style="
-                                        color: #fff;
-                                        font-size: 14px;
-                                        font-weight: bold;
-                                        font-family: 'Trebuchet MS',
-                                          'Lucida Sans Unicode', 'Lucida Grande',
-                                          'Lucida Sans', Arial, sans-serif;
-                                        text-align: left;
-                                        margin: 0;
-                                      "
-                                    >
-                                      Flight 2:
-                                    </p>
-                                  </td>
-
-                                  <!-- Date of flight-->
-                                  <td
-                                    valign="top"
-                                    style="padding: 5px 15px 5px 0"
-                                  >
-                                    <table
-                                      align="left"
-                                      border="0"
-                                      cellpadding="0"
-                                      cellspacing="0"
-                                    >
-                                      <tr>
-                                        <td
-                                          valign="top"
-                                          style="
-                                            padding: 0;
-                                            font-weight: normal;
-                                          "
-                                        >
-                                          <table
-                                            class="column h2"
-                                            width="100%"
-                                            border="0"
-                                            cellpadding="0"
-                                            cellspacing="0"
-                                          >
-                                            <tr>
-                                              <td
-                                                valign="top"
-                                                style="padding-right: 20px"
-                                              >
-                                                <p
-                                                  style="
-                                                    color: #fff;
-                                                    font-size: 14px;
-                                                    font-family: 'Trebuchet MS',
-                                                      'Lucida Sans Unicode',
-                                                      'Lucida Grande',
-                                                      'Lucida Sans', Arial,
-                                                      sans-serif;
-                                                    text-align: left;
-                                                    margin: 0;
-                                                  "
-                                                >
-                                                  Thursday, 07/03/2025
-                                                </p>
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </td>
-
-                                        <!-- Est Travel Time  -->
-                                        <td valign="top">
-                                          <table
-                                            class="column h4"
-                                            width="100%"
-                                            border="0"
-                                            cellpadding="0"
-                                            cellspacing="0"
-                                          >
-                                            <tr>
-                                              <td
-                                                valign="top"
-                                                style="padding-right: 20px"
-                                              >
-                                                <p
-                                                  style="
-                                                    color: #fff;
-                                                    font-size: 14px;
-                                                    font-family: 'Trebuchet MS',
-                                                      'Lucida Sans Unicode',
-                                                      'Lucida Grande',
-                                                      'Lucida Sans', Arial,
-                                                      sans-serif;
-                                                    text-align: left;
-                                                    margin: 0;
-                                                  "
-                                                >
-                                                  Est. Travel Time:
-                                                  <strong>5h 45m</strong>
-                                                </p>
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </td>
-
-                                        <!-- Wanna Get Away -->
-                                        <td valign="top" style="padding: 0">
-                                          <table
-                                            border="0"
-                                            cellpadding="0"
-                                            cellspacing="0"
-                                            width="100%"
-                                          >
-                                            <tr>
-                                              <td valign="top">
-                                                <p
-                                                  style="
-                                                    color: #fff;
-                                                    font-size: 12px;
-
-                                                    font-family: 'Trebuchet MS',
-                                                      'Lucida Sans Unicode',
-                                                      'Lucida Grande',
-                                                      'Lucida Sans', Arial,
-                                                      sans-serif;
-                                                    text-align: left;
-                                                    margin: 0;
-                                                  "
-                                                >
-                                                  <a
-                                                    href="#"
-                                                    style="
-                                                      color: #fff;
-                                                      text-decoration: underline;
-                                                    "
-                                                    >Wanna Get Away®</a
-                                                  >
-                                                </p>
-                                              </td>
-                                            </tr>
-                                          </table>
-                                        </td>
-                                      </tr>
-                                    </table>
-                                  </td>
-                                </tr>
-                              </table>
-                            </td>
-                          </tr>
-                          <!-- end of Flight 2 Header -->
-                        </table>
-
-                        <!-- Start of Segment for Flight 2 -->
+            <!-- start of Travel Notice row -->
+            <tr>
+              <td id="advisory" valign="top" style="padding-bottom: 10px">
+                <table
+                  width="100%"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                  style="background-color: #a4baf2"
+                >
+                  <tr>
+                    <td
+                      class="wrap"
+                      valign="top"
+                      style="padding: 15px 15px 7px 15px"
+                    >
+                      <table
+                        width="100%"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
                         <tr>
-                          <td valign="top" style="padding: 15px">
+                          <td style="padding-bottom: 10px">
                             <table
                               align="left"
                               border="0"
@@ -1254,414 +251,1423 @@
                               cellspacing="0"
                             >
                               <tr>
-                                <!-- flight number -->
-                                <td
-                                  width="74"
-                                  valign="middle"
-                                  style="padding-right: 15px"
-                                >
-                                  <p
-                                    style="
-                                      color: #111b40;
-                                      font-size: 14px;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0;
-                                    "
-                                  >
-                                    FLIGHT
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #111b40;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0;
-                                    "
-                                  >
-                                    # 3570
-                                  </p>
-                                </td>
-                                <!-- end flight number -->
-                                <!-- departure details -->
-                                <td
-                                  width="160"
-                                  valign="top"
-                                  style="padding-right: 15px"
-                                >
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 5px 0;
-                                    "
-                                  >
-                                    DEPARTS
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #13247c;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 4px 0;
-                                    "
-                                  >
-                                    <span style="font-size: 20px"
-                                      ><strong>BHM 04:15</strong></span
-                                    >PM
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 12px;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0;
-                                    "
-                                  >
-                                    Birmingham
-                                  </p>
-                                </td>
-
-                                <!-- end departure details -->
-
-                                <!-- plane icon -->
                                 <td valign="middle" style="padding-right: 15px">
                                   <img
-                                    src="/images/airplane-small-icon.png"
-                                    alt="small airplane icon between departures and arrivals"
+                                    src="/images/travel-notice.png"
+                                    alt="Warning icon for Travel Notice"
+                                    width="24"
+                                    style="display: block"
                                   />
                                 </td>
-                                <!-- end plane icon -->
+                                <td class="copy" valign="middle">
+                                  <p
+                                    style="
+                                      color: #111b40;
+                                      font-size: 18px;
+                                      font-weight: bold;
 
-                                <!-- arrival details -->
-                                <td
-                                  width="160"
-                                  valign="top"
-                                  style="padding-right: 15px"
-                                >
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 5px 0;
-                                    "
-                                  >
-                                    ARRIVES
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 4px 0;
-                                    "
-                                  >
-                                    <span style="font-size: 20px"
-                                      ><strong>MDW 06:10</strong></span
-                                    >PM
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 12px;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
                                       margin: 0;
                                     "
                                   >
-                                    Chicago (Midway)
+                                    Travel notice
                                   </p>
                                 </td>
-                                <!-- end arrival details -->
                               </tr>
                             </table>
                           </td>
                         </tr>
-                        <!-- End of Segment for Flight 2 -->
-
-                        <!-- plane change -->
+                        <!-- global notice text row -->
                         <tr>
                           <td valign="top">
+                            <p
+                              style="
+                                color: #111b40;
+                                font-size: 12px;
+
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              <strong>REAL ID Requirement:</strong> Do you have
+                              a REAL ID? Beginning May 7, 2025, you will need a
+                              state-issued REAL ID compliant license or
+                              identification card, or another acceptable form of
+                              ID (such as a U.S. Passport), to fly within the
+                              United States. Visit
+                              <a
+                                href="http://www.tsa.gov"
+                                style="color: #304cb2"
+                                >www.tsa.gov</a
+                              >
+                              for a list of acceptable forms of ID and
+                              additional information regarding REAL ID
+                              requirement.
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- end of Travel Notice row -->
+
+            <!-- Start of Redeemed Points row with plane -->
+            <tr>
+              <td style="background-color: #304cb2; padding: 5px; color: #fff">
+                <table
+                  class="redeemed-points"
+                  width="100%"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                >
+                  <tr>
+                    <!-- Airplane Icon -->
+                    <td
+                      class="plane-icon"
+                      width="125"
+                      style="text-align: center"
+                    >
+                      <img
+                        src="/images/airplane-icon.png"
+                        alt="Icon of an airplane"
+                        width="95"
+                        style="
+                          display: block;
+                          margin-left: 10px;
+                          margin-bottom: 10px;
+                        "
+                      />
+                    </td>
+                    <!-- Text Content -->
+                    <td class="redeemed-text" style="padding: 10px 20px 10px 0">
+                      <p
+                        style="
+                          font-size: 20px;
+                          font-weight: bold;
+                          margin: 0 0 10px;
+                          text-align: left;
+                        "
+                      >
+                        Hi Jameson,
+                      </p>
+                      <p style="font-size: 14px; margin: 0; text-align: left">
+                        You successfully redeemed 40,564 Rapid Rewards® points
+                        for this trip. We're looking forward to flying together!
+                        It can't come soon enough. Below you'll find your
+                        itinerary, important travel information, and trip
+                        receipt. See you onboard soon!
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- End of Redeemed Points row with plane -->
+
+            <!-- start overview of itinerary -->
+            <tr>
+              <td style="padding: 15px" valign="top">
+                <table
+                  cellspacing="0"
+                  cellpadding="0"
+                  border="0"
+                  width="100%"
+                  style="border-bottom: 1px solid #ccc"
+                >
+                  <tr>
+                    <td style="padding-bottom: 10px" valign="top">
+                      <p
+                        class="date-space"
+                        style="
+                          color: #636363;
+                          font-size: 14px;
+                          font-weight: bold;
+
+                          text-align: left;
+                          text-transform: uppercase;
+                          margin: 0;
+                        "
+                      >
+                        June 28 - July 2
+                      </p>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding-bottom: 10px" valign="top">
+                      <table
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
+                        <tr>
+                          <td valign="top">
+                            <p
+                              style="
+                                font-size: 40px;
+
+                                color: #111b40;
+                                margin: 0;
+                                text-align: left;
+                              "
+                            >
+                              DEN
+                            </p>
+                          </td>
+                          <td style="padding: 0 15px" valign="middle">
+                            <img
+                              src="/images/airplane-small-icon.png"
+                              alt="small flight icon from one destination to another"
+                              style="display: block; width: 27"
+                            />
+                          </td>
+                          <td>
+                            <p
+                              style="
+                                font-size: 40px;
+
+                                color: #111b40;
+                                margin: 0;
+                                text-align: left;
+                              "
+                            >
+                              BHM
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td style="padding-bottom: 15px" valign="top">
+                      <p
+                        style="
+                          color: #646464;
+                          font-size: 13px;
+
+                          text-align: left;
+                          margin: 0;
+                        "
+                      >
+                        Denver to Birmingham
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- end overview of itinerary -->
+
+            <!-- start of confirmation section -->
+            <tr>
+              <td style="padding-bottom: 10px" valign="top">
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  width="100%"
+                  style="padding: 0 15px"
+                >
+                  <tr class="confirmation-row">
+                    <!-- Confirmation Number -->
+                    <td
+                      class="confirmation-cell"
+                      style="font-weight: normal"
+                      valign="bottom"
+                    >
+                      <p
+                        style="
+                          color: #111b40;
+                          font-size: 14px;
+                          text-align: left;
+                          margin: 0;
+                        "
+                      >
+                        Confirmation #
+                        <span style="color: #008522; font-size: 32px"
+                          ><strong>4T4SMU</strong></span
+                        >
+                      </p>
+                    </td>
+                    <!-- Confirmation Date -->
+                    <td
+                      class="confirmation-cell"
+                      style="padding: 0; font-weight: normal; text-align: right"
+                      valign="bottom"
+                    >
+                      <p style="color: #646464; font-size: 12px; margin: 0">
+                        Confirmation date: 01/01/25
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- Passenger Row -->
+            <tr>
+              <td valign="top">
+                <table
+                  border="0"
+                  cellspacing="0"
+                  cellpadding="0"
+                  align="left"
+                  style="padding: 0 15px"
+                >
+                  <tr>
+                    <td
+                      style="padding-right: 15px; padding-bottom: 10px"
+                      valign="top"
+                    >
+                      <p
+                        style="
+                          color: #646464;
+                          font-size: 14px;
+                          font-weight: bold;
+                          text-align: left;
+                          margin: 0 0 5px 0;
+                        "
+                      >
+                        PASSENGER
+                      </p>
+                      <p
+                        style="
+                          color: #646464;
+                          font-size: 12px;
+                          text-align: left;
+                          margin: 0 0 5px 0;
+                        "
+                      >
+                        RAPID REWARDS #
+                      </p>
+                      <p
+                        style="
+                          color: #646464;
+                          font-size: 12px;
+                          text-align: left;
+                          margin: 0 0 5px 0;
+                        "
+                      >
+                        TICKET #
+                      </p>
+                      <p
+                        style="
+                          color: #646464;
+                          font-size: 12px;
+                          text-align: left;
+                          margin: 0;
+                        "
+                      >
+                        EST. POINTS EARNED
+                      </p>
+                    </td>
+                    <td valign="top" style="padding-bottom: 10px">
+                      <p
+                        style="
+                          color: #111b40;
+                          font-size: 14px;
+                          font-weight: bold;
+                          text-align: left;
+                          margin: 0 0 5px 0;
+                        "
+                      >
+                        Jameson Smith
+                      </p>
+                      <p
+                        style="
+                          color: #111b40;
+                          font-size: 12px;
+                          text-align: left;
+                          margin: 0 0 5px 0;
+                        "
+                      >
+                        23455325087
+                      </p>
+                      <p
+                        style="
+                          color: #111b40;
+                          font-size: 12px;
+                          text-align: left;
+                          margin: 0 0 5px 0;
+                        "
+                      >
+                        6349773008765
+                      </p>
+                      <p
+                        style="
+                          color: #111b40;
+                          font-size: 12px;
+                          text-align: left;
+                          margin: 0;
+                        "
+                      >
+                        0
+                      </p>
+                    </td>
+                  </tr>
+                </table>
+              </td>
+            </tr>
+            <!-- end of confirmation section -->
+
+            <!-- start of disclaimer section -->
+            <tr>
+              <td style="padding: 0 15px 5px 15px" valign="top">
+                <p
+                  style="
+                    color: #646464;
+                    font-size: 10px;
+                    border-top: 1px solid #ccc;
+                    text-align: left;
+                    padding-top: 15px;
+                    margin-top: 0;
+                  "
+                >
+                  Rapid Rewards® points are only estimations.
+                </p>
+              </td>
+            </tr>
+            <!-- end of disclaimer section -->
+
+            <!-- start of itinerary -->
+            <!-- entire itinerary -->
+            <tr>
+              <td>
+                <table
+                  id="itinerary"
+                  width="100%"
+                  border="0"
+                  cellpadding="0"
+                  cellspacing="0"
+                >
+                  <!-- just the Your itinerary label row -->
+                  <tr>
+                    <td
+                      class="container"
+                      valign="top"
+                      style="padding-bottom: 10px"
+                    >
+                      <p
+                        style="
+                          color: #111b40;
+                          font-size: 24px;
+                          font-weight: bold;
+
+                          text-align: left;
+                          margin: 0;
+                        "
+                      >
+                        Your itinerary
+                      </p>
+                    </td>
+                  </tr>
+                  <!-- END just the Your itinerary label row -->
+                  <!-- main blue header for flight 1  -->
+                  <tr>
+                    <td>
+                      <table
+                        width="100%"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="background-color: #111b3f"
+                      >
+                        <!-- start flight 1 row-->
+                        <tr>
+                          <!-- flight 1 label -->
+                          <td
+                            class="header-flight-1"
+                            valign="top"
+                            style="padding: 5px 0 5px 15px"
+                            width="14%"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Flight 1:
+                            </p>
+                          </td>
+                          <!-- Date of flight-->
+                          <td
+                            class="date-of-flight"
+                            valign="top"
+                            style="padding: 5px 0"
+                            width="26%"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 14px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Saturday, 06/15/2025
+                            </p>
+                          </td>
+                          <!-- Est Travel Time  -->
+                          <td
+                            class="est-travel-time"
+                            valign="top"
+                            style="padding: 5px 0"
+                            width="30%"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 14px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Est. Travel Time:
+                              <strong>2h 30m</strong>
+                            </p>
+                          </td>
+                          <!-- Wanna Get Away -->
+                          <td
+                            class="wanna-get-away"
+                            valign="top"
+                            style="padding: 5px 15px 5px 0"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 12px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              <a
+                                href="#"
+                                style="color: #fff; text-decoration: underline"
+                                >Wanna Get Away®</a
+                              >
+                            </p>
+                          </td>
+                        </tr>
+                        <!-- END Flight 1 row-->
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- END main blue header for flight 1  -->
+
+                  <!-- Start of Segment for Flight 1 -->
+                  <tr>
+                    <td valign="top" style="padding: 15px">
+                      <table
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
+                        <tr>
+                          <!-- flight number -->
+                          <td
+                            width="74"
+                            valign="middle"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #111b40;
+                                font-size: 14px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              FLIGHT
+                            </p>
+                            <p
+                              style="
+                                color: #111b40;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              # 3980
+                            </p>
+                          </td>
+                          <!-- end flight number -->
+                          <!-- departure details -->
+                          <td
+                            width="160"
+                            valign="top"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0 0 5px 0;
+                              "
+                            >
+                              DEPARTS
+                            </p>
+                            <p
+                              style="
+                                color: #13247c;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0 0 4px 0;
+                              "
+                            >
+                              <span style="font-size: 20px"
+                                ><strong>DEN 01:35</strong></span
+                              >PM
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 12px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Denver
+                            </p>
+                          </td>
+                          <!-- end departure details -->
+
+                          <!-- plane icon -->
+                          <td valign="middle" style="padding-right: 15px">
+                            <img
+                              class="flight-logo"
+                              src="/images/airplane-small-icon.png"
+                              alt="small airplane icon between departures and arrivals"
+                            />
+                          </td>
+                          <!-- end plane icon -->
+
+                          <!-- arrival details -->
+                          <td
+                            width="160"
+                            valign="top"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0 0 5px 0;
+                              "
+                            >
+                              ARRIVES
+                            </p>
+                            <p
+                              style="
+                                color: #13247c;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0 0 4px 0;
+                              "
+                            >
+                              <span style="font-size: 20px"
+                                ><strong>BHM 05:05</strong></span
+                              >PM
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 12px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Birmingham
+                            </p>
+                          </td>
+
+                          <!-- end arrival details -->
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- End of Segment for Flight 1 -->
+
+                  <!-- start header flight 2 -->
+
+                  <tr>
+                    <td>
+                      <table
+                        width="100%"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                        style="background-color: #111b3f"
+                      >
+                        <!-- start flight 2 row -->
+                        <tr>
+                          <!-- Flight 2 label-->
+                          <td
+                            class="header-flight-2"
+                            valign="top"
+                            style="padding: 5px 0 5px 15px"
+                            width="14%"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Flight 2:
+                            </p>
+                          </td>
+
+                          <!-- Date of flight-->
+                          <td
+                            class="date-of-flight"
+                            valign="top"
+                            style="padding: 5px 0"
+                            width="26%"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 14px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Thursday, 07/03/2025
+                            </p>
+                          </td>
+
+                          <!-- Est Travel Time  -->
+                          <td
+                            class="est-travel-time"
+                            valign="top"
+                            style="padding: 5px 0"
+                            width="30%"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 14px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Est. Travel Time:
+                              <strong>5h 45m</strong>
+                            </p>
+                          </td>
+
+                          <!-- Wanna Get Away -->
+                          <td
+                            class="wanna-get-away"
+                            valign="top"
+                            style="padding: 5px 15px 5px 0"
+                          >
+                            <p
+                              style="
+                                color: #fff;
+                                font-size: 12px;
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              <a
+                                href="#"
+                                style="color: #fff; text-decoration: underline"
+                                >Wanna Get Away®</a
+                              >
+                            </p>
+                          </td>
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+
+                  <!-- end of Flight 2 Header -->
+
+                  <!-- Start of Segment for Flight 2 -->
+                  <tr>
+                    <td valign="top" style="padding: 15px">
+                      <table
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
+                        <tr>
+                          <!-- flight number -->
+                          <td
+                            width="74"
+                            valign="middle"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #111b40;
+                                font-size: 14px;
+
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              FLIGHT
+                            </p>
+                            <p
+                              style="
+                                color: #111b40;
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              # 3570
+                            </p>
+                          </td>
+                          <!-- end flight number -->
+                          <!-- departure details -->
+                          <td
+                            width="160"
+                            valign="top"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                text-align: left;
+                                margin: 0 0 5px 0;
+                              "
+                            >
+                              DEPARTS
+                            </p>
+                            <p
+                              style="
+                                color: #13247c;
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                text-align: left;
+                                margin: 0 0 4px 0;
+                              "
+                            >
+                              <span style="font-size: 20px"
+                                ><strong>BHM 04:15</strong></span
+                              >PM
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 12px;
+
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Birmingham
+                            </p>
+                          </td>
+
+                          <!-- end departure details -->
+
+                          <!-- plane icon -->
+                          <td valign="middle" style="padding-right: 15px">
+                            <img
+                              class="flight-logo"
+                              src="/images/airplane-small-icon.png"
+                              alt="small airplane icon between departures and arrivals"
+                            />
+                          </td>
+                          <!-- end plane icon -->
+
+                          <!-- arrival details -->
+                          <td
+                            width="160"
+                            valign="top"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                text-align: left;
+                                margin: 0 0 5px 0;
+                              "
+                            >
+                              ARRIVES
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                text-align: left;
+                                margin: 0 0 4px 0;
+                              "
+                            >
+                              <span style="font-size: 20px"
+                                ><strong>MDW 06:10</strong></span
+                              >PM
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 12px;
+
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Chicago (Midway)
+                            </p>
+                          </td>
+                          <!-- end arrival details -->
+                        </tr>
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- End of Segment for Flight 2 -->
+
+                  <!-- plane change -->
+                  <tr>
+                    <td valign="top">
+                      <table
+                        width="100%"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
+                        <tr>
+                          <!-- space on left is first td -->
+                          <td
+                            width="74"
+                            valign="middle"
+                            style="color: #fff; padding-right: 15px"
+                          ></td>
+                          <!-- end of space -->
+                          <td valign="middle" style="padding-right: 15px">
                             <table
                               width="100%"
                               border="0"
                               cellpadding="0"
                               cellspacing="0"
+                              style="
+                                background-color: #f5f5f5;
+                                border-radius: 20px;
+                              "
                             >
                               <tr>
                                 <td
-                                  width="74"
                                   valign="middle"
-                                  style="color: #fff; padding-right: 15px"
-                                ></td>
-                                <td valign="middle" style="padding-right: 15px">
-                                  <table
-                                    width="100%"
-                                    border="0"
-                                    cellpadding="0"
-                                    cellspacing="0"
+                                  style="padding: 3px 0 5px 15px"
+                                >
+                                  <p
                                     style="
-                                      background-color: #f5f5f5;
-                                      border-radius: 20px;
+                                      color: #111b40;
+                                      font-size: 13px;
+
+                                      text-align: left;
+                                      margin: 0;
                                     "
                                   >
-                                    <tr>
-                                      <td
-                                        valign="middle"
-                                        style="padding: 3px 0 5px 15px"
-                                      >
-                                        <p
-                                          style="
-                                            color: #111b40;
-                                            font-size: 13px;
-                                            font-family: 'Trebuchet MS',
-                                              'Lucida Sans Unicode',
-                                              'Lucida Grande', 'Lucida Sans',
-                                              Arial, sans-serif;
-                                            text-align: left;
-                                            margin: 0;
-                                          "
-                                        >
-                                          Stop:
-                                          <img
-                                            src="/images/change-planes-icon.png"
-                                            alt="icon to show there is a plane change"
-                                            width="24"
-                                            border="0"
-                                            style="display: inline"
-                                          />
-                                          <span
-                                            style="
-                                              color: #111b40;
-                                              font-size: 13px;
-                                              font-family: 'Trebuchet MS',
-                                                'Lucida Sans Unicode',
-                                                'Lucida Grande', 'Lucida Sans',
-                                                Arial, sans-serif;
-                                              text-align: left;
-                                              margin: 0;
-                                            "
-                                            >Change planes</span
-                                          >
-                                        </p>
-                                      </td>
-                                    </tr>
-                                  </table>
+                                    Stop:
+                                    <img
+                                      src="/images/change-planes-icon.png"
+                                      alt="icon to show there is a plane change"
+                                      width="24"
+                                      border="0"
+                                      style="display: inline"
+                                    />
+                                    <span
+                                      style="
+                                        color: #111b40;
+                                        font-size: 13px;
+
+                                        text-align: left;
+                                        margin: 0;
+                                      "
+                                      >Change planes</span
+                                    >
+                                  </p>
                                 </td>
                               </tr>
                             </table>
                           </td>
                         </tr>
-                        <!-- end plane change -->
+                      </table>
+                    </td>
+                  </tr>
+                  <!-- end plane change -->
 
-                        <!-- flight 2 of return -->
+                  <!-- flight 2 of return -->
 
+                  <tr>
+                    <td valign="top" style="padding: 15px">
+                      <table
+                        align="left"
+                        border="0"
+                        cellpadding="0"
+                        cellspacing="0"
+                      >
                         <tr>
-                          <td valign="top" style="padding: 15px">
-                            <table
-                              align="left"
-                              border="0"
-                              cellpadding="0"
-                              cellspacing="0"
+                          <!-- flight number -->
+                          <td
+                            width="74"
+                            valign="middle"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #111b40;
+                                font-size: 14px;
+
+                                text-align: left;
+                                margin: 0;
+                              "
                             >
-                              <tr>
-                                <!-- flight number -->
-                                <td
-                                  width="74"
-                                  valign="middle"
-                                  style="padding-right: 15px"
-                                >
-                                  <p
-                                    style="
-                                      color: #111b40;
-                                      font-size: 14px;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0;
-                                    "
-                                  >
-                                    FLIGHT
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #111b40;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0;
-                                    "
-                                  >
-                                    # 1467
-                                  </p>
-                                </td>
-                                <!-- end flight number -->
-                                <!-- departure details -->
-                                <td
-                                  width="160"
-                                  valign="top"
-                                  style="padding-right: 15px"
-                                >
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 5px 0;
-                                    "
-                                  >
-                                    DEPARTS
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 4px 0;
-                                    "
-                                  >
-                                    <span style="font-size: 20px"
-                                      ><strong>MDW 07:15</strong></span
-                                    >PM
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 12px;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0;
-                                    "
-                                  >
-                                    Chicago (Midway)
-                                  </p>
-                                </td>
+                              FLIGHT
+                            </p>
+                            <p
+                              style="
+                                color: #111b40;
+                                font-size: 14px;
+                                font-weight: bold;
 
-                                <!-- end departure details -->
-
-                                <!-- plane icon -->
-                                <td valign="middle" style="padding-right: 15px">
-                                  <img
-                                    src="/images/airplane-small-icon.png"
-                                    alt="small airplane icon between departures and arrivals"
-                                  />
-                                </td>
-                                <!-- end plane icon -->
-
-                                <!-- arrival details -->
-                                <td
-                                  width="160"
-                                  valign="top"
-                                  style="padding-right: 15px"
-                                >
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 5px 0;
-                                    "
-                                  >
-                                    ARRIVES
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #13247c;
-                                      font-size: 14px;
-                                      font-weight: bold;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0 0 4px 0;
-                                    "
-                                  >
-                                    <span style="font-size: 20px"
-                                      ><strong>DEN 09:00</strong></span
-                                    >PM
-                                  </p>
-                                  <p
-                                    style="
-                                      color: #646464;
-                                      font-size: 12px;
-                                      font-family: 'Trebuchet MS',
-                                        'Lucida Sans Unicode', 'Lucida Grande',
-                                        'Lucida Sans', Arial, sans-serif;
-                                      text-align: left;
-                                      margin: 0;
-                                    "
-                                  >
-                                    Denver
-                                  </p>
-                                </td>
-                                <!-- end arrival details -->
-                              </tr>
-                            </table>
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              # 1467
+                            </p>
                           </td>
+                          <!-- end flight number -->
+                          <!-- departure details -->
+                          <td
+                            width="160"
+                            valign="top"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                text-align: left;
+                                margin: 0 0 5px 0;
+                              "
+                            >
+                              DEPARTS
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+
+                                text-align: left;
+                                margin: 0 0 4px 0;
+                              "
+                            >
+                              <span style="font-size: 20px"
+                                ><strong>MDW 07:15</strong></span
+                              >PM
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 12px;
+
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Chicago (Midway)
+                            </p>
+                          </td>
+
+                          <!-- end departure details -->
+
+                          <!-- plane icon -->
+                          <td valign="middle" style="padding-right: 15px">
+                            <img
+                              class="flight-logo"
+                              src="/images/airplane-small-icon.png"
+                              alt="small airplane icon between departures and arrivals"
+                            />
+                          </td>
+                          <!-- end plane icon -->
+
+                          <!-- arrival details -->
+                          <td
+                            width="160"
+                            valign="top"
+                            style="padding-right: 15px"
+                          >
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0 0 5px 0;
+                              "
+                            >
+                              ARRIVES
+                            </p>
+                            <p
+                              style="
+                                color: #13247c;
+                                font-size: 14px;
+                                font-weight: bold;
+                                text-align: left;
+                                margin: 0 0 4px 0;
+                              "
+                            >
+                              <span style="font-size: 20px"
+                                ><strong>DEN 09:00</strong></span
+                              >PM
+                            </p>
+                            <p
+                              style="
+                                color: #646464;
+                                font-size: 12px;
+
+                                text-align: left;
+                                margin: 0;
+                              "
+                            >
+                              Denver
+                            </p>
+                          </td>
+                          <!-- end arrival details -->
                         </tr>
+                      </table>
+                    </td>
+                  </tr>
 
-                        <!-- end of flight 2 of return -->
-                      </td>
-                    </tr>
-                  </table>
-                </td>
-              </tr>
-              <!-- end of itinerary -->
+                  <!-- end of flight 2 of return -->
+                </table>
 
-              <!-- end all the rows here -->
-            </table>
+                <!-- just payment information label row -->
+                <tr>
+                  <td class="container" valign="top" style="padding: 10px 0">
+                    <p
+                      style="
+                        color: #111b40;
+                        font-size: 24px;
+                        font-weight: bold;
+                        text-align: left;
+                        margin: 0;
+                      "
+                    >
+                      Payment information
+                    </p>
+                  </td>
+                </tr>
+                <!-- END payment information label row -->
+
+                <!-- start of payment information section -->
+                <tr>
+                  <td>
+                    <table
+                      width="100%"
+                      border="0"
+                      cellspacing="0"
+                      cellpadding="0"
+                    >
+                      <tr>
+                        <td>
+                          <table
+                            width="97%"
+                            border="0"
+                            cellspacing="0"
+                            cellpadding="0"
+                          >
+                            <tr>
+                              <td
+                                valign="middle"
+                                style="background-color: #111b3f"
+                                width="295"
+                              >
+                                <p
+                                  style="
+                                    padding: 6px 0 7px 15px;
+                                    color: #fff;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-align: left;
+                                    margin: 0;
+                                    line-height: 1;
+                                  "
+                                >
+                                  Total Cost
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+
+                        <td>
+                          <table
+                            width="100%"
+                            border="0"
+                            cellspacing="0"
+                            cellpadding="0"
+                            style="border-collapse: collapse"
+                          >
+                            <tr>
+                              <td
+                                valign="middle"
+                                style="background-color: #111b3f"
+                                width="295"
+                              >
+                                <p
+                                  style="
+                                    padding: 6px 0 7px 15px;
+                                    color: #fff;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-align: left;
+                                    margin: 0;
+                                    line-height: 1;
+                                  "
+                                >
+                                  Payment
+                                </p>
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                      <tr>
+                        <!-- Air/Conf and Basefare costs table -->
+                        <table border="0" cellspacing="0" cellpadding="0">
+                          <tr>
+                            <td valign="top">
+                              <p
+                                style="
+                                  color: #111b40;
+                                  font-size: 14px;
+                                  font-weight: bold;
+                                  text-align: left;
+                                  margin: 0;
+                                  padding: 15px 0 3px 15px;
+                                "
+                              >
+                                Air - <span style="color: #008522">4T4SMU</span>
+                              </p>
+                            </td>
+                          </tr>
+                          <!-- base fare row -->
+                          <tr>
+                            <td
+                              valign="top"
+                              width="186"
+                              style="padding-right: 10px"
+                            >
+                              <p
+                                style="
+                                  color: #646464;
+                                  font-size: 12px;
+                                  text-align: left;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                Base Fare
+                              </p>
+                            </td>
+                            <td valign="top" style="padding-right: 5px">
+                              <p
+                                style="
+                                  color: #646464;
+                                  font-size: 12px;
+                                  text-align: left;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                $
+                              </p>
+                            </td>
+                            <td valign="top" style="padding-right: 5px">
+                              <p
+                                style="
+                                  color: #646464;
+                                  font-size: 12px;
+                                  text-align: right;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                273.10
+                              </p>
+                            </td>
+                          </tr>
+                          <!-- 9/11 Fee row -->
+                          <tr>
+                            <td
+                              valign="top"
+                              width="186"
+                              style="padding-right: 10px"
+                            >
+                              <p
+                                style="
+                                  color: #646464;
+                                  font-size: 12px;
+                                  text-align: left;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                U.S. 9/11 Security Fee
+                              </p>
+                            </td>
+                            <td valign="top" style="padding-right: 5px">
+                              <p
+                                style="
+                                  color: #646464;
+                                  font-size: 12px;
+                                  text-align: left;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                $
+                              </p>
+                            </td>
+                            <td valign="top" style="padding-right: 5px">
+                              <p
+                                style="
+                                  color: #646464;
+                                  font-size: 12px;
+                                  text-align: right;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                11.20
+                              </p>
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>
+                              <p
+                                style="
+                                  border-top: 1px solid #111b40;
+                                  margin: 0 0 0 15px;
+                                  padding-bottom: 5px;
+                                "
+                              ></p>
+                            </td>
+                            <td>
+                              <p
+                                style="
+                                  border-top: 1px solid #111b40;
+                                  margin: 0;
+                                  padding-bottom: 5px;
+                                "
+                              ></p>
+                            </td>
+                            <td>
+                              <p
+                                style="
+                                  border-top: 1px solid #111b40;
+                                  margin: 0;
+                                  padding-bottom: 5px;
+                                "
+                              ></p>
+                            </td>
+                          </tr>
+
+                          <!-- Total row -->
+
+                          <tr>
+                            <td
+                              valign="top"
+                              width="186"
+                              style="padding-right: 10px"
+                            >
+                              <p
+                                style="
+                                  color: #111b40;
+                                  font-size: 12px;
+                                  font-weight: bold;
+                                  text-align: left;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                Total
+                              </p>
+                            </td>
+                            <td valign="top" style="padding-right: 5px">
+                              <p
+                                style="
+                                  color: #111b40;
+                                  font-size: 12px;
+                                  font-weight: bold;
+                                  text-align: left;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                $
+                              </p>
+                            </td>
+                            <td valign="top" style="padding-right: 5px">
+                              <p
+                                style="
+                                  color: #111b40;
+                                  font-size: 12px;
+                                  font-weight: bold;
+                                  text-align: right;
+                                  margin: 0;
+                                  padding: 0 0 5px 15px;
+                                "
+                              >
+                                284.30
+                              </p>
+                            </td>
+                          </tr>
+                        </table>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end of payment information section -->
+              </td>
+            </tr>
+            <!-- end of itinerary -->
+            <!-- end all the rows here -->
             <!-- end of main container -->
-          </td>
-        </tr>
-      </table>
+          </table>
+        </td>
+      </tr>
       <!-- end of html email -->
-    </div>
+    </table>
   </body>
 </html>
