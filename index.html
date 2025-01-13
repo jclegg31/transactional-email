@@ -106,8 +106,78 @@
           border-collapse: collapse !important;
         }
 
+        .payment-space {
+          padding-bottom: 15px !important;
+        }
+
+        .payment-td {
+          padding-left: 10px !important;
+        }
+
         .payment-column {
           padding-right: 15px !important;
+        }
+
+        .stackable {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .app-table {
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        .app-table tr:first-child {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+        }
+
+        .app-table tr:first-child td {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .app-table tr:first-child td:first-child {
+          order: 1 !important;
+          display: block !important;
+          margin: 10px auto !important;
+          text-align: center !important;
+        }
+        .app-table tr:first-child td:last-child {
+          order: 2 !important;
+          display: block !important;
+          margin: 0 auto !important;
+          text-align: center !important;
+        }
+        .app-table tr:first-child img {
+          display: block !important;
+          margin: 0 auto !important;
+          max-width: 100% !important;
+          height: auto !important;
+        }
+
+        .app-table tr:first-child h1 {
+          display: block !important;
+          margin: 10px auto !important;
+          text-align: center !important;
+        }
+
+        .app-table tr:nthchild(2) {
+          display: block !important;
+          text-align: center !important;
+        }
+
+        .app-table tr:nth-child(2) td {
+          display: block !important;
+          text-align: center !important;
+        }
+
+        .app-table tr:nth-child(2) img {
+          display: block !important;
+          margin: 10px auto !important;
+          width: 90% !important;
         }
       }
     </style>
@@ -1399,266 +1469,513 @@
                 <!-- END payment information label row -->
 
                 <!-- start of payment information section -->
+
                 <tr>
+                  <!-- td for entire row -->
                   <td>
+                    <!-- table for entire row -->
                     <table
                       class="payment-info"
                       width="100%"
                       border="0"
                       cellspacing="0"
                       cellpadding="0"
-                      style="border: 1px solid orange"
+                      style="
+                        border-bottom: 1px solid #646464;
+                        padding-bottom: 10px;
+                      "
                     >
-                      <!-- Total Cost Header -->
                       <tr>
-                        <td>
+                        <!-- just for left side -->
+                        <td class="stackable" style="vertical-align: top">
                           <table
                             class="payment-info"
-                            width="49%"
+                            width="100%"
                             border="0"
                             cellspacing="0"
                             cellpadding="0"
-                            style="border: 3px solid green"
                           >
+                            <!-- Total Cost Header -->
                             <tr>
-                              <td
-                                class="payment-info"
-                                valign="middle"
-                                style="background-color: #111b3f"
-                                width="295"
-                              >
-                                <p
-                                  style="
-                                    padding: 6px 0 7px 15px;
-                                    color: #fff;
-                                    font-size: 14px;
-                                    font-weight: bold;
-                                    text-align: left;
-                                    margin: 0;
-                                    line-height: 1;
-                                  "
+                              <td>
+                                <table
+                                  class="payment-info"
+                                  width="98%"
+                                  align="left"
+                                  border="0"
+                                  cellspacing="0"
+                                  cellpadding="0"
                                 >
-                                  Total Cost
-                                </p>
+                                  <tr>
+                                    <td
+                                      class="payment-info"
+                                      valign="middle"
+                                      style="background-color: #111b3f"
+                                      width="295"
+                                    >
+                                      <p
+                                        style="
+                                          padding: 6px 0 7px 15px;
+                                          color: #fff;
+                                          font-size: 14px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          line-height: 1;
+                                        "
+                                      >
+                                        Total Cost
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
+                              </td>
+                            </tr>
+                            <!-- END Total Cost Header -->
+
+                            <tr>
+                              <td>
+                                <!-- Air/Conf and Basefare costs table -->
+                                <table
+                                  class="payment-info"
+                                  border="0"
+                                  cellspacing="0"
+                                  cellpadding="0"
+                                >
+                                  <tr>
+                                    <td valign="top">
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 14px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 15px 0 3px 15px;
+                                        "
+                                      >
+                                        Air -
+                                        <span style="color: #008522"
+                                          >4T4SMU</span
+                                        >
+                                      </p>
+                                    </td>
+                                  </tr>
+
+                                  <!-- base fare row -->
+                                  <tr>
+                                    <td
+                                      valign="top"
+                                      width="186"
+                                      style="padding-right: 10px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        Base Fare
+                                      </p>
+                                    </td>
+                                    <td valign="top" style="padding-right: 5px">
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        $
+                                      </p>
+                                    </td>
+                                    <td
+                                      class="payment-column"
+                                      valign="top"
+                                      style="padding-right: 5px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: right;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        273.10
+                                      </p>
+                                    </td>
+                                  </tr>
+
+                                  <!-- 9/11 Fee row -->
+                                  <tr>
+                                    <td
+                                      valign="top"
+                                      width="186"
+                                      style="padding-right: 10px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        U.S. 9/11 Security Fee
+                                      </p>
+                                    </td>
+                                    <td valign="top" style="padding-right: 5px">
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        $
+                                      </p>
+                                    </td>
+                                    <td
+                                      class="payment-column"
+                                      valign="top"
+                                      style="padding-right: 5px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: right;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        11.20
+                                      </p>
+                                    </td>
+                                  </tr>
+
+                                  <tr>
+                                    <td>
+                                      <p
+                                        style="
+                                          border-top: 1px solid #111b40;
+                                          margin: 0 0 0 15px;
+                                          padding-bottom: 5px;
+                                        "
+                                      ></p>
+                                    </td>
+                                    <td>
+                                      <p
+                                        style="
+                                          border-top: 1px solid #111b40;
+                                          margin: 0;
+                                          padding-bottom: 5px;
+                                        "
+                                      ></p>
+                                    </td>
+                                    <td>
+                                      <p
+                                        style="
+                                          border-top: 1px solid #111b40;
+                                          margin: 0;
+                                          padding-bottom: 5px;
+                                        "
+                                      ></p>
+                                    </td>
+                                  </tr>
+
+                                  <!-- Total row -->
+
+                                  <tr>
+                                    <td
+                                      class="payment-space"
+                                      valign="top"
+                                      width="186"
+                                      style="padding-right: 10px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 12px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        Total
+                                      </p>
+                                    </td>
+                                    <td valign="top" style="padding-right: 5px">
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 12px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        $
+                                      </p>
+                                    </td>
+                                    <td
+                                      class="payment-column"
+                                      valign="top"
+                                      style="padding-right: 5px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 12px;
+                                          font-weight: bold;
+                                          text-align: right;
+                                          margin: 0;
+                                          padding: 0 0 5px 15px;
+                                        "
+                                      >
+                                        284.30
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
                               </td>
                             </tr>
                           </table>
                         </td>
-                      </tr>
-                      <!-- END Total Cost Header -->
 
-                      <tr>
-                        <td>
-                          <!-- Air/Conf and Basefare costs table -->
+                        <!-- end of payment information section -->
+
+                        <!-- start of payment sub section -->
+                        <!-- just for right side -->
+                        <td class="stackable">
                           <table
                             class="payment-info"
+                            width="100%"
                             border="0"
                             cellspacing="0"
                             cellpadding="0"
-                            style="border: 1px solid yellow"
                           >
+                            <!-- Payment Header -->
                             <tr>
-                              <td valign="top">
-                                <p
-                                  style="
-                                    color: #111b40;
-                                    font-size: 14px;
-                                    font-weight: bold;
-                                    text-align: left;
-                                    margin: 0;
-                                    padding: 15px 0 3px 15px;
-                                  "
+                              <td>
+                                <table
+                                  class="payment-info"
+                                  width="98%"
+                                  align="right"
+                                  border="0"
+                                  cellspacing="0"
+                                  cellpadding="0"
                                 >
-                                  Air -
-                                  <span style="color: #008522">4T4SMU</span>
-                                </p>
+                                  <tr>
+                                    <td
+                                      class="payment-info"
+                                      valign="middle"
+                                      style="background-color: #111b3f"
+                                      width="295"
+                                    >
+                                      <p
+                                        style="
+                                          padding: 6px 0 7px 15px;
+                                          color: #fff;
+                                          font-size: 14px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          line-height: 1;
+                                        "
+                                      >
+                                        Payment
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
                               </td>
                             </tr>
-
-                            <!-- base fare row -->
-                            <tr>
-                              <td
-                                valign="top"
-                                width="186"
-                                style="padding-right: 10px"
-                              >
-                                <p
-                                  style="
-                                    color: #646464;
-                                    font-size: 12px;
-                                    text-align: left;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  Base Fare
-                                </p>
-                              </td>
-                              <td valign="top" style="padding-right: 5px">
-                                <p
-                                  style="
-                                    color: #646464;
-                                    font-size: 12px;
-                                    text-align: left;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  $
-                                </p>
-                              </td>
-                              <td
-                                class="payment-column"
-                                valign="top"
-                                style="padding-right: 5px"
-                              >
-                                <p
-                                  style="
-                                    color: #646464;
-                                    font-size: 12px;
-                                    text-align: right;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  273.10
-                                </p>
-                              </td>
-                            </tr>
-
-                            <!-- 9/11 Fee row -->
-                            <tr>
-                              <td
-                                valign="top"
-                                width="186"
-                                style="padding-right: 10px"
-                              >
-                                <p
-                                  style="
-                                    color: #646464;
-                                    font-size: 12px;
-                                    text-align: left;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  U.S. 9/11 Security Fee
-                                </p>
-                              </td>
-                              <td valign="top" style="padding-right: 5px">
-                                <p
-                                  style="
-                                    color: #646464;
-                                    font-size: 12px;
-                                    text-align: left;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  $
-                                </p>
-                              </td>
-                              <td
-                                class="payment-column"
-                                valign="top"
-                                style="padding-right: 5px"
-                              >
-                                <p
-                                  style="
-                                    color: #646464;
-                                    font-size: 12px;
-                                    text-align: right;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  11.20
-                                </p>
-                              </td>
-                            </tr>
+                            <!-- END Payment Header -->
 
                             <tr>
                               <td>
-                                <p
-                                  style="
-                                    border-top: 1px solid #111b40;
-                                    margin: 0 0 0 15px;
-                                    padding-bottom: 5px;
-                                  "
-                                ></p>
-                              </td>
-                              <td>
-                                <p
-                                  style="
-                                    border-top: 1px solid #111b40;
-                                    margin: 0;
-                                    padding-bottom: 5px;
-                                  "
-                                ></p>
-                              </td>
-                              <td>
-                                <p
-                                  style="
-                                    border-top: 1px solid #111b40;
-                                    margin: 0;
-                                    padding-bottom: 5px;
-                                  "
-                                ></p>
-                              </td>
-                            </tr>
+                                <!-- Payment table -->
+                                <table
+                                  class="payment-info"
+                                  border="0"
+                                  cellspacing="0"
+                                  cellpadding="0"
+                                  style="padding-left: 15px"
+                                >
+                                  <tr>
+                                    <td class="payment-td" valign="top">
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 15px 0 1px 5px;
+                                        "
+                                      >
+                                        January 1, 2025
+                                      </p>
+                                    </td>
+                                  </tr>
 
-                            <!-- Total row -->
+                                  <!-- payment amount row -->
+                                  <tr>
+                                    <td
+                                      class="payment-td"
+                                      valign="top"
+                                      style="padding-right: 10px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 14px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 1px 5px;
+                                        "
+                                      >
+                                        Payment Amount
+                                      </p>
+                                    </td>
 
-                            <tr>
-                              <td
-                                valign="top"
-                                width="186"
-                                style="padding-right: 10px"
-                              >
-                                <p
-                                  style="
-                                    color: #111b40;
-                                    font-size: 12px;
-                                    font-weight: bold;
-                                    text-align: left;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  Total
-                                </p>
-                              </td>
-                              <td valign="top" style="padding-right: 5px">
-                                <p
-                                  style="
-                                    color: #111b40;
-                                    font-size: 12px;
-                                    font-weight: bold;
-                                    text-align: left;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  $
-                                </p>
-                              </td>
-                              <td
-                                class="payment-column"
-                                valign="top"
-                                style="padding-right: 5px"
-                              >
-                                <p
-                                  style="
-                                    color: #111b40;
-                                    font-size: 12px;
-                                    font-weight: bold;
-                                    text-align: right;
-                                    margin: 0;
-                                    padding: 0 0 5px 15px;
-                                  "
-                                >
-                                  284.30
-                                </p>
+                                    <td
+                                      valign="top"
+                                      style="padding-right: 5px"
+                                      class="payment-column"
+                                    >
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 14px;
+                                          font-weight: bold;
+                                          text-align: right;
+                                          margin: 0;
+                                          padding: 0 0 1px 5px;
+                                        "
+                                      >
+                                        40,564 pts
+                                      </p>
+                                    </td>
+                                  </tr>
+
+                                  <!-- Rapid Reward Points row -->
+                                  <tr>
+                                    <td
+                                      class="payment-td"
+                                      valign="top"
+                                      width="186"
+                                      style="padding-right: 10px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 7px 5px;
+                                        "
+                                      >
+                                        Rapid Rewards® Points
+                                      </p>
+                                    </td>
+                                  </tr>
+
+                                  <!-- date row -->
+                                  <tr>
+                                    <td class="payment-td" valign="top">
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 15px 0 1px 5px;
+                                        "
+                                      >
+                                        January 1, 2025
+                                      </p>
+                                    </td>
+                                  </tr>
+
+                                  <!-- payment amount row -->
+                                  <tr>
+                                    <td
+                                      class="payment-td"
+                                      valign="top"
+                                      style="padding-right: 10px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 14px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 1px 5px;
+                                        "
+                                      >
+                                        Payment Amount
+                                      </p>
+                                    </td>
+
+                                    <td
+                                      valign="top"
+                                      style="padding-right: 5px"
+                                      class="payment-column"
+                                    >
+                                      <p
+                                        style="
+                                          color: #111b40;
+                                          font-size: 14px;
+                                          font-weight: bold;
+                                          text-align: right;
+                                          margin: 0;
+                                          padding: 0 0 1px 5px;
+                                        "
+                                      >
+                                        $11.20
+                                      </p>
+                                    </td>
+                                  </tr>
+
+                                  <!-- Rapid Reward Points row -->
+                                  <tr>
+                                    <td
+                                      class="payment-td"
+                                      valign="top"
+                                      width="186"
+                                      style="padding-right: 10px"
+                                    >
+                                      <p
+                                        style="
+                                          color: #646464;
+                                          font-size: 12px;
+                                          font-weight: bold;
+                                          text-align: left;
+                                          margin: 0;
+                                          padding: 0 0 7px 5px;
+                                        "
+                                      >
+                                        Visa ending in 8765
+                                      </p>
+                                    </td>
+                                  </tr>
+                                </table>
                               </td>
                             </tr>
                           </table>
@@ -1667,7 +1984,221 @@
                     </table>
                   </td>
                 </tr>
-                <!-- end of payment information section -->
+
+                <!-- end of payment sub section -->
+
+                <!-- Fare rules -->
+
+                <tr>
+                  <td>
+                    <p style="font-size: 10px; color: #646464; margin: 10px 0">
+                      Fare rules: If you decide to make a change to your current
+                      itinerary it may result in a fare increase.
+                    </p>
+                    <p
+                      style="
+                        font-size: 10px;
+                        color: #646464;
+                        margin: 10px 0;
+                        padding-bottom: 0;
+                      "
+                    >
+                      Your ticket number : 5262594293190
+                    </p>
+                  </td>
+                </tr>
+                <!-- End Fare rules -->
+
+                <!-- All Your Perks in One Place -->
+                <tr>
+                  <td>
+                    <p
+                      style="
+                        margin: 0;
+                        padding-top: 10px;
+                        font-size: 24px;
+                        color: #111b40;
+                        font-weight: bold;
+                      "
+                    >
+                      All your perks, all in one place.
+                      <span
+                        style="
+                          margin: 0;
+                          padding-top: 10px;
+                          font-size: 20px;
+                          font-weight: normal;
+                        "
+                        >(Plus a few reminders.)</span
+                      >
+                    </p>
+                  </td>
+                </tr>
+
+                <tr>
+                  <td>
+                    <table
+                      border="0"
+                      width="100%"
+                      cellspacing="0"
+                      cellpadding="0"
+                      style="background-color: #c0ccd6; margin-top: 10px"
+                    >
+                      <tr>
+                        <td>
+                          <img
+                            src="/images/airplane-diagonal-dark-icon.png"
+                            alt="icon of an airplane at 45 degree angle up"
+                            style="padding: 10px 30px 10px 15px"
+                            width="40"
+                          />
+                        </td>
+                        <td>
+                          <p
+                            style="
+                              font-size: 13px;
+                              color: #304cb2;
+                              padding-right: 20px;
+                              padding-top: 5px;
+                            "
+                          >
+                            <span style="font-weight: bold"
+                              >Wanna Get Away® fare:</span
+                            >
+                            Your two bags fly free® no change or cancel fees,
+                            and free same-day standby (taxes and fees may apply
+                            but refunds will be provided). Wanna Get Away fares
+                            booked with points are refundable. Learn more.
+                          </p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <img
+                            src="/images/clock-icon.png"
+                            alt="icon of a clock set to 3pm"
+                            style="padding: 10px 30px 10px 15px"
+                            width="40"
+                          />
+                        </td>
+                        <td>
+                          <p
+                            style="
+                              font-size: 13px;
+                              color: #304cb2;
+                              padding-right: 20px;
+                            "
+                          >
+                            Make sure you know
+                            <span style="text-decoration: underline"
+                              >when to arrive at your airport</span
+                            >. Times vary by city.
+                          </p>
+                        </td>
+                      </tr>
+
+                      <tr>
+                        <td>
+                          <img
+                            src="/images/circle-with-arrows-icon.png"
+                            alt="icon of two arrows pointing in opposite direction"
+                            style="padding: 10px 30px 10px 15px"
+                            width="40"
+                          />
+                        </td>
+                        <td>
+                          <p
+                            style="
+                              font-size: 13px;
+                              color: #304cb2;
+                              padding-right: 20px;
+                              padding-bottom: 5px;
+                            "
+                          >
+                            If you do not cancel your reservation at least 10
+                            minutes before the flight's original scheduled
+                            departure time, any points used for booking will be
+                            forfeited, along with any taxes and fees associated
+                            with your reward travel reservation.
+                          </p>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- END All Your Perks in One Place -->
+
+                <!-- Ready for takeoff -->
+                <tr>
+                  <td>
+                    <p
+                      style="
+                        margin: 0;
+                        padding: 10px 0;
+                        font-size: 24px;
+                        color: #111b40;
+                        font-weight: bold;
+                      "
+                    >
+                      Prepare for takeoff
+                    </p>
+                  </td>
+                </tr>
+                <!-- Use our app to make changes -->
+                <tr>
+                  <td>
+                    <table
+                      class="app-table"
+                      border="0"
+                      cellpadding="0"
+                      cellspacing="0"
+                      width="100%"
+                      style="background-color: #2c44b8"
+                    >
+                      <tr>
+                        <td style="padding: 0 0 0 15px" valign="top">
+                          <h1
+                            style="
+                              color: #fff;
+                              font-size: 24px;
+                              text-align: left;
+                              line-height: normal;
+                            "
+                          >
+                            Use our app to make changes to your trip, get a
+                            boarding pass, & more.
+                          </h1>
+                        </td>
+                        <td>
+                          <img
+                            src="/images/southwest-heart.png"
+                            alt="image of southwest heart logo"
+                            style="margin: 30px 30px 0 40px"
+                          />
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <img
+                            src="/images/download-apple-button.png"
+                            alt=""
+                            width="174"
+                            style="margin: -10px 0 10px 15px"
+                          />
+                          <img
+                            src="/images/download-android-button.png"
+                            alt=""
+                            width="174"
+                            style="margin: -10px 0 10px 3px"
+                          />
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- end Use our app to make changes -->
 
                 <!-- end of itinerary -->
                 <!-- end all the rows here -->
