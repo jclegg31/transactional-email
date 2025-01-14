@@ -123,61 +123,159 @@
           width: 100% !important;
         }
 
-        .app-table {
-          width: 100% !important;
-          text-align: center !important;
-        }
-
+        /* use our app */
         .app-table tr:first-child {
           display: block !important;
-          width: 100% !important;
           text-align: center !important;
         }
-
         .app-table tr:first-child td {
           display: block !important;
           width: 100% !important;
         }
-
-        .app-table tr:first-child td:first-child {
-          order: 1 !important;
+        .app-table tr:first-child td:first-child,
+        .app-table tr:first-child td:last-child {
           display: block !important;
-          margin: 10px auto !important;
+          width: 100% !important;
           text-align: center !important;
         }
         .app-table tr:first-child td:last-child {
-          order: 2 !important;
-          display: block !important;
-          margin: 0 auto !important;
-          text-align: center !important;
+          display: none !important;
         }
-        .app-table tr:first-child img {
-          display: block !important;
-          margin: 0 auto !important;
-          max-width: 100% !important;
-          height: auto !important;
+        .app-table tr:first-child h2 {
+          margin: 10px 15px 20px 8px !important;
         }
-
-        .app-table tr:first-child h1 {
+        .mobile-logo {
           display: block !important;
-          margin: 10px auto !important;
-          text-align: center !important;
         }
-
-        .app-table tr:nthchild(2) {
+        .app-table tr:nth-child(2) {
           display: block !important;
           text-align: center !important;
         }
-
         .app-table tr:nth-child(2) td {
           display: block !important;
           text-align: center !important;
+          padding-bottom: 5px !important;
         }
-
         .app-table tr:nth-child(2) img {
           display: block !important;
-          margin: 10px auto !important;
-          width: 90% !important;
+          margin: 6px auto 7px auto !important;
+          width: 93% !important;
+        }
+
+        .sw-image {
+          padding: 30px 0 30px 0 !important;
+        }
+
+        /* automatic check-in */
+        .checkin-table {
+          padding-top: 10px !important;
+        }
+        .checkin-table tr {
+          display: block !important;
+        }
+
+        .checkin-table tr:first-child td {
+          display: block !important;
+          width: 100% !important;
+          text-align: center !important;
+        }
+        .checkin-table tr:first-child td img {
+          padding: 10px 0 10px 0 !important;
+        }
+
+        .mobile-link {
+          display: block !important;
+          text-align: center !important;
+          margin: 15px auto !important;
+          width: 95% !important;
+          border: 1px solid #fff !important;
+          padding: 15px 0 !important;
+        }
+
+        /* rapid rewards double table */
+        .nested-left,
+        .nested-right {
+          display: block !important;
+          width: 100% !important;
+        }
+
+        .rr-table td {
+          width: 100% !important;
+          display: block !important;
+        }
+
+        .nested-left img,
+        .nested-right img {
+          display: block !important;
+          margin: 0 auto !important;
+        }
+
+        .nested-left p,
+        .nested-right p {
+          text-align: center;
+        }
+
+        .td-ht {
+          height: auto !important;
+          margin-top: 0 !important;
+          padding: 0 !important;
+        }
+        .nested-left a,
+        .nested-right a {
+          display: block !important;
+          text-align: center !important;
+          margin: 0 auto !important;
+          width: 97% !important;
+          border: 1px solid #fff !important;
+          padding: 15px 0 !important;
+        }
+
+        .nested-left a {
+          border: 1px solid #304cb2 !important;
+        }
+
+        .nested-right {
+          margin-left: 0 !important;
+        }
+
+        /* Book Hotel Car Offers buttons */
+        .book-table,
+        .book-hotel,
+        .book-car,
+        .all-offers {
+          width: 100% !important;
+        }
+
+        .book-table td {
+          display: block !important;
+          width: 100% !important;
+          margin-bottom: 15px !important;
+        }
+
+        .book-hotel td,
+        .book-car td,
+        .all-offers td {
+          display: inline-block !important;
+          width: 33% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+
+        .book-car,
+        .all-offers {
+          margin-left: 0 !important;
+        }
+
+        .right-arrow {
+          text-align: right !important;
+        }
+
+        .icon-left {
+          text-align: left !important;
+        }
+
+        .icon-left img {
+          margin-left: 15px !important;
         }
       }
     </style>
@@ -2158,7 +2256,14 @@
                     >
                       <tr>
                         <td style="padding: 0 0 0 15px" valign="top">
-                          <h1
+                          <div class="mobile-logo" style="display: none">
+                            <img
+                              class="sw-image"
+                              src="/images/southwest-heart.png"
+                              alt="image of southwest heart logo"
+                            />
+                          </div>
+                          <h2
                             style="
                               color: #fff;
                               font-size: 24px;
@@ -2168,7 +2273,7 @@
                           >
                             Use our app to make changes to your trip, get a
                             boarding pass, & more.
-                          </h1>
+                          </h2>
                         </td>
                         <td>
                           <img
@@ -2199,6 +2304,383 @@
                 </tr>
 
                 <!-- end Use our app to make changes -->
+
+                <!-- Automatic check-in -->
+                <tr>
+                  <td>
+                    <table
+                      class="checkin-table"
+                      border="0"
+                      cellspacing="0"
+                      cellpadding="0"
+                      style="
+                        background-color: #ff7a2f;
+                        color: #fff;
+                        margin-top: 10px;
+                      "
+                    >
+                      <tr>
+                        <td class="mobile-sun">
+                          <img
+                            src="/images/sunrising.png"
+                            alt="rising-sun icon"
+                            style="padding: 45px 20px 0 20px"
+                            width="50"
+                          />
+                        </td>
+                        <td>
+                          <h2
+                            style="
+                              font-size: 24px;
+                              font-weight: bold;
+
+                              margin: 10px 20px 10px 0;
+                            "
+                          >
+                            Don't miss out on automatic check-in
+                          </h2>
+                          <p
+                            style="
+                              font-size: 14px;
+                              font-weight: bold;
+
+                              margin: 0;
+                            "
+                          >
+                            When available, EarlyBird Check-In® reserves your
+                            boarding position at 36 hours before your flight,
+                            earlier than regular check-in.
+                          </p>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td
+                          class="mobile-link"
+                          colspan="2"
+                          align="right"
+                          style="padding: 10px 20px 10px 0"
+                        >
+                          <a
+                            href="#"
+                            style="
+                              color: #fff;
+                              font-size: 14px;
+                              font-weight: bold;
+                              text-decoration: none;
+                            "
+                            >Get it now ></a
+                          >
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end Automatic check-in -->
+
+                <!-- Rapid Rewards double box section -->
+                <tr>
+                  <td>
+                    <!-- main outer table -->
+                    <table
+                      class="rr-table"
+                      width="100%"
+                      border="0"
+                      cellspacing="0"
+                      cellpadding="0"
+                      style="margin-top: 10px"
+                    >
+                      <tr>
+                        <!-- left top table -->
+                        <td valign="top">
+                          <table
+                            class="nested-left"
+                            border="0"
+                            cellspacing="0"
+                            cellpadding="0"
+                            style="background-color: #9adafe; padding: 15px"
+                            width="295"
+                          >
+                            <tr>
+                              <td>
+                                <img
+                                  src="/images/ico-hotel_rt.png"
+                                  alt=""
+                                  width="45"
+                                  style="border-radius: 50%; display: block"
+                                />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="td-ht" height="130" valign="top">
+                                <p
+                                  style="
+                                    color: #304cb2;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    margin-bottom: 8px;
+                                    margin-top: 20px;
+                                  "
+                                >
+                                  Earn up to 10,000 Rapid Rewards® points per
+                                  night
+                                </p>
+                                <p
+                                  style="
+                                    color: #304cb2;
+                                    font-size: 14px;
+                                    margin-top: 0;
+                                  "
+                                >
+                                  Choose a hotel in Birmingham.
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td
+                                class="td-ht"
+                                style="text-align: right; padding-top: 35px"
+                              >
+                                <a
+                                  href="#"
+                                  style="
+                                    color: #304cb2;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                  "
+                                  >Book hotel ></a
+                                >
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <!-- right bottom table -->
+                        <td valign="top">
+                          <table
+                            class="nested-right"
+                            border="0"
+                            cellspacing="0"
+                            cellpadding="0"
+                            style="
+                              background-color: #304cb2;
+                              margin-left: 10px;
+                              padding: 15px;
+                            "
+                            width="295"
+                          >
+                            <tr>
+                              <td>
+                                <img
+                                  src="/images/pts-icon.png"
+                                  alt=""
+                                  width="45"
+                                  style="border-radius: 50%; display: block"
+                                />
+                              </td>
+                            </tr>
+                            <tr>
+                              <td class="td-ht" height="130" valign="top">
+                                <p
+                                  style="
+                                    color: #fff;
+                                    font-size: 18px;
+                                    font-weight: bold;
+                                    margin-bottom: 8px;
+                                    margin-top: 20px;
+                                  "
+                                >
+                                  You've just landed a special offer of up to
+                                  45% off points!
+                                </p>
+                                <p style="color: #fff; font-size: 14px">
+                                  Lock it in before this deal flies away – and
+                                  boost your points balance now!
+                                </p>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td
+                                class="td-ht"
+                                style="text-align: right; padding-top: 35px"
+                              >
+                                <a
+                                  href="#"
+                                  style="
+                                    color: #fff;
+                                    font-size: 14px;
+                                    font-weight: bold;
+                                    text-decoration: none;
+                                  "
+                                  >Buy points ></a
+                                >
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+                <!-- end Rapid Rewards double box section -->
+
+                <!-- Book Hotel Car Offers buttons -->
+                <tr>
+                  <td>
+                    <!-- main table to hold 3 tables -->
+                    <table
+                      class="book-table"
+                      border="0"
+                      cellspacing="0"
+                      cellpadding="0"
+                      style="margin-top: 20px"
+                    >
+                      <tr>
+                        <!-- Book Hotel table -->
+                        <td>
+                          <table
+                            class="book-hotel"
+                            border="0"
+                            width="195"
+                            cellspacing="0"
+                            cellpadding="0"
+                            style="
+                              background-color: #e6e7e8;
+                              padding: 0 10px 0 0;
+                            "
+                          >
+                            <tr>
+                              <td class="icon-left" align="right">
+                                <img
+                                  src="/images/buildings-icon-dark.png"
+                                  alt=""
+                                  width="30"
+                                />
+                              </td>
+                              <td align="center">
+                                <p>
+                                  <a
+                                    href="#"
+                                    style="
+                                      font-size: 14px;
+                                      font-weight: bold;
+                                      text-decoration: none;
+                                      color: #111b40;
+                                    "
+                                    >Book hotel</a
+                                  >
+                                </p>
+                              </td>
+                              <td class="right-arrow" align="left">
+                                <img
+                                  src="/images/right-arrow.png"
+                                  alt=""
+                                  width="9"
+                                  valign="middle"
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <!-- Book Car table -->
+                        <td>
+                          <table
+                            class="book-car"
+                            border="0"
+                            width="190"
+                            cellspacing="0"
+                            cellpadding="0"
+                            style="
+                              background-color: #e6e7e8;
+                              padding: 0 10px 0 0;
+                              margin-left: 10px;
+                            "
+                          >
+                            <tr>
+                              <td class="icon-left" align="right">
+                                <img
+                                  src="/images/car-icon-dark.png"
+                                  alt=""
+                                  width="30"
+                                />
+                              </td>
+                              <td align="center">
+                                <p>
+                                  <a
+                                    href="#"
+                                    style="
+                                      font-size: 14px;
+                                      font-weight: bold;
+                                      text-decoration: none;
+                                      color: #111b40;
+                                    "
+                                    >Book car</a
+                                  >
+                                </p>
+                              </td>
+                              <td class="right-arrow" align="left">
+                                <img
+                                  src="/images/right-arrow.png"
+                                  alt=""
+                                  width="9"
+                                  valign="middle"
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                        <!-- View all Offers table -->
+                        <td>
+                          <table
+                            class="all-offers"
+                            border="0"
+                            width="195"
+                            cellspacing="0"
+                            cellpadding="0"
+                            style="
+                              background-color: #e6e7e8;
+                              padding: 0 10px 0 0;
+                              margin-left: 10px;
+                            "
+                          >
+                            <tr>
+                              <td class="icon-left" align="right">
+                                <img
+                                  src="/images/for-sale-tag-icon.png"
+                                  alt=""
+                                  width="30"
+                                />
+                              </td>
+                              <td align="center">
+                                <p>
+                                  <a
+                                    href="#"
+                                    style="
+                                      font-size: 14px;
+                                      font-weight: bold;
+                                      text-decoration: none;
+                                      color: #111b40;
+                                    "
+                                    >View all offers</a
+                                  >
+                                </p>
+                              </td>
+                              <td class="right-arrow" align="left">
+                                <img
+                                  src="/images/right-arrow.png"
+                                  alt=""
+                                  width="9"
+                                  valign="middle"
+                                />
+                              </td>
+                            </tr>
+                          </table>
+                        </td>
+                      </tr>
+                    </table>
+                  </td>
+                </tr>
+
+                <!-- end Book Hotel Car Offers buttons -->
 
                 <!-- end of itinerary -->
                 <!-- end all the rows here -->
